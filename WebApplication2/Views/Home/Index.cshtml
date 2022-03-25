@@ -1,0 +1,14 @@
+﻿@using WebApplication2.Models
+@model LoginModel
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <span>Login</span>
+    @Html.TextBoxFor(m => m.Login, "Login");
+    @Html.ValidationMessageFor(m => m.Login, "");
+    <br />
+    <span>Password</span>
+    @Html.PasswordFor(m => m.Password, "Password");
+    @Html.ValidationMessageFor(m => m.Password, "");
+    <button type="submit">submit</button>
+}
